@@ -1,0 +1,16 @@
+[package]
+name = "number2words"
+version = "0.1.0"
+edition = "2021"
+authors = ["Marco Franssen <marco.franssen@gmail.com>"]
+repository = "https://github.com/marcofranssen/number2words/"
+description = "Convert numbers to words"
+license = "MIT"
+readme = "README.md"
+keywords = ["numbers", "words"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "4.4.11"
