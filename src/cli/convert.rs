@@ -1,6 +1,6 @@
 use clap::{value_parser, Arg, ArgMatches, Command};
 
-use number2words::number_to_words;
+use number2words::{English, Language};
 
 pub fn new() -> Command {
     Command::new("convert")
@@ -15,6 +15,6 @@ pub fn new() -> Command {
 
 pub fn run(m: &ArgMatches) {
     let number: usize = *m.get_one("number").expect("number is required");
-    let number_in_words = number_to_words(number);
+    let number_in_words = English.number_to_words(number);
     println!("{}", number_in_words);
 }
