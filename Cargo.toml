@@ -12,5 +12,12 @@ categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "number2words"
+path = "src/main.rs"
+
 [dependencies]
 clap = "4.4.11"
