@@ -74,3 +74,85 @@ fn test_number_to_words_english() {
     );
     assert_eq!(lang.number_to_words(usize::MAX), "eightteen quintillion four hundred fourty-six quadrillion seven hundred fourty-four trillion seventy-three billion seven hundred nine million five hundred fifty-one thousand six hundred fifteen");
 }
+
+#[test]
+fn test_number_to_words_dutch() {
+    let lang = Dutch;
+    assert_eq!(lang.number_to_words(0), "nul");
+    assert_eq!(lang.number_to_words(1), "een");
+    assert_eq!(lang.number_to_words(13), "dertien");
+    assert_eq!(lang.number_to_words(85), "vijfentachtig");
+    assert_eq!(lang.number_to_words(199), "honderdnegenennegentig");
+    assert_eq!(
+        lang.number_to_words(5237),
+        "vijfduizend tweehonderdzevenendertig"
+    );
+    assert_eq!(
+        lang.number_to_words(52379),
+        "tweeënvijftigduizend driehonderdnegenenzeventig"
+    );
+    assert_eq!(
+        lang.number_to_words(345678),
+        "driehonderdvijfenveertigduizend zeshonderdachtenzeventig"
+    );
+    assert_eq!(
+        lang.number_to_words(6876542),
+        "zes miljoen achthonderdzesenzeventigduizend vijfhonderdtweeënveertig"
+    );
+    assert_eq!(
+        lang.number_to_words(59876543),
+        "negenenvijftig miljoen achthonderdzesenzeventigduizend vijfhonderddrieënveertig"
+    );
+    assert_eq!(
+        lang.number_to_words(459876543),
+        "vierhonderdnegenenvijftig miljoen achthonderdzesenzeventigduizend vijfhonderddrieënveertig"
+    );
+    assert_eq!(
+        lang.number_to_words(3459876543),
+        "drie miljard vierhonderdnegenenvijftig miljoen achthonderdzesenzeventigduizend vijfhonderddrieënveertig"
+    );
+    assert_eq!(
+        lang.number_to_words(23459876542),
+        "drieëntwintig miljard vierhonderdnegenenvijftig miljoen achthonderdzesenzeventigduizend vijfhonderdtweeënveertig"
+    );
+    assert_eq!(
+        lang.number_to_words(987654321),
+        "negenhonderdzevenentachtig miljoen zeshonderdvierenvijftigduizend driehonderdeenentwintig"
+    );
+    assert_eq!(
+        lang.number_to_words(9876534210),
+        "negen miljard achthonderdzesenzeventig miljoen vijfhonderdvierendertigduizend tweehonderdtien"
+    );
+    assert_eq!(
+        lang.number_to_words(98765432101),
+        "achtennegentig miljard zevenhonderdvijfenzestig miljoen vierhonderdtweeëndertigduizend honderdeen"
+    );
+    assert_eq!(
+        lang.number_to_words(727654321012),
+        "zevenhonderdzevenentwintig miljard zeshonderdvierenvijftig miljoen driehonderdeenentwintigduizend twaalf"
+    );
+    assert_eq!(
+        lang.number_to_words(6727654321012),
+        "zes biljoen zevenhonderdzevenentwintig miljard zeshonderdvierenvijftig miljoen driehonderdeenentwintigduizend twaalf"
+    );
+    assert_eq!(
+        lang.number_to_words(56_727_654_321_012),
+        "zesenvijftig biljoen zevenhonderdzevenentwintig miljard zeshonderdvierenvijftig miljoen driehonderdeenentwintigduizend twaalf"
+    );
+    assert_eq!(
+        lang.number_to_words(856_727_654_321_012),
+        "achthonderdzesenvijftig biljoen zevenhonderdzevenentwintig miljard zeshonderdvierenvijftig miljoen driehonderdeenentwintigduizend twaalf"
+    );
+    assert_eq!(
+        lang.number_to_words(456_727_654_321_012),
+        "vierhonderdzesenvijftig biljoen zevenhonderdzevenentwintig miljard zeshonderdvierenvijftig miljoen driehonderdeenentwintigduizend twaalf"
+    );
+    assert_eq!(
+        lang.number_to_words(34_567_276_543_210_129),
+        "vierendertig biljard vijfhonderdzevenenzestig biljoen tweehonderdzesenzeventig miljard vijfhonderddrieënveertig miljoen tweehonderdtienduizend honderdnegenentwintig"
+    );
+    assert_eq!(
+        lang.number_to_words(234_567_276_543_210_129),
+        "tweehonderdvierendertig biljard vijfhonderdzevenenzestig biljoen tweehonderdzesenzeventig miljard vijfhonderddrieënveertig miljoen tweehonderdtienduizend honderdnegenentwintig"
+    );
+}
